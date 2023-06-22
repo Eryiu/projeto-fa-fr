@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>FA & FR</title>
+</head>
+
+<body>
+
+    <div class="graf">
+
+        <h1 class="titulo">Gráficos de Frequência</h1>
+
+        <label for="data" class="graf-label">Números:</label>
+        <input type="text" class="graf-input" id="data" placeholder="Insira os números separados por vírgula"><br><br>
+        <button class="graf-btn" onclick="desenharCharts()">Desenhar Gráficos</button><br><br>
+
+        <div>
+
+            <canvas id="barraChart" class="chart-canvas"></canvas>
+            <canvas id="pizzaChart" class="chart-canvas"></canvas>
+
+
+            <h1 class="titulo-explicacao">Conceito:</h1>
+            <p class="explicacao"><strong>Frequência absoluta:</strong> É o número de ocorrências de um determinado
+                valor em
+                um conjunto de dados. Representa a contagem direta de quantas vezes um valor específico
+                aparece.<br><br><strong>Frequência relativa:</strong> É a proporção ou percentagem da frequência
+                absoluta de
+                um
+                valor em relação ao total de observações. É calculada dividindo-se a frequência absoluta pelo tamanho
+                total
+                da amostra e multiplicando por 100 para obter a porcentagem. Representa a distribuição percentual dos
+                valores em relação ao total.</p>
+        </div>
+
+        <div>
+            <div class="calculadora">
+                <h1 class="titulo-calc">Calculadora</h1>
+                <p id="resultado"></p>
+                <table>
+                    <tr>
+                        <td><button class="botao" onclick="clean()">C</button></td>
+                        <td><button class="botao" onclick="back()">⌫</button></td>
+                        <td><button class="botao" onclick="insert('/')">/</button></td>
+                        <td><button class="botao" onclick="insert('*')">X</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('7')">7</button></td>
+                        <td><button class="botao" onclick="insert('8')">8</button></td>
+                        <td><button class="botao" onclick="insert('9')">9</button></td>
+                        <td><button class="botao" onclick="insert('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('4')">4</button></td>
+                        <td><button class="botao" onclick="insert('5')">5</button></td>
+                        <td><button class="botao" onclick="insert('6')">6</button></td>
+                        <td><button class="botao" onclick="insert('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('1')">1</button></td>
+                        <td><button class="botao" onclick="insert('2')">2</button></td>
+                        <td><button class="botao" onclick="insert('3')">3</button></td>
+                        <td rowspan="2"><button class="botao" style="height: 106px" onclick="calcular()">=</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="botao" style="width: 106px" onclick="insert('0')">0</button></td>
+                        <td><button class="botao" onclick="insert('.')">.</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="exercicios-resolvidos">
+
+        <h1 class="titulo-questao">
+            Veja também exercícios resolvidos sobre Frequência Absoluta e Relativa, para que possa fixar melhor o
+            conteúdo.
+        </h1>
+        <a class="questao-a" href="questao1.html">Clique aqui.</a>
+    </div>
+
+    <div class="quiz">
+
+        <h3 class="titulo-quiz">Agora que você conhece melhor como funciona Frequência Absoluta e Relativa, tente
+            realizar o nosso quiz</h3>
+        <a class="btn-quiz" href="quiz.html">QUIZ</a>
+
+    </div>
+
+    <footer class="rodape">
+
+        <p><strong>Por Ana Karolinny, Eduardo, Érica, Iully & Mylena</strong></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
